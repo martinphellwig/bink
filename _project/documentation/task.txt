@@ -1,0 +1,35 @@
+Objective
+=========
+Data File To be Used:
+Dataset source: https://data.gov.uk/dataset/mobile-phone-masts
+(The attached CSV contains publicly available data about mobile phone masts in an area of the UK.
+Contains public sector information licensed under the Open Government Licence v3.0.
+
+Dataset description:
+This dataset provides information on mobile phone masts located on Leeds City Council property, respective lease information and annual rent charges concerning them.
+
+NOTE:
+This is real life dataset and contains un-normalised data, for example the Tenant Name field contains several very similar names, treat these as individual names.
+
+Actions:
+    1. Load the data file, process and output the data in the forms specified.
+    2. Read in, process and present the data as specified in the requirements section.
+    3. Demonstrate usage of list comprehension for at least one of the tasks.
+    4. Allow user input to run all your script, or run specific sections. For example, just display section3 in the requirements below.
+
+
+Requirements
+============
+1. Read in the attached file and produce a list sorted by Current Rent in ascending order . Obtain the first 5 items from the resultant list and  output to the console.
+
+2. From the list of all mast data create new list of mast data with Lease Years = 25 years.
+  Output the list to the console, include all data fields.
+Output the total rent for all items in this list to the console.
+
+3. Create a dictionary containing tenant name and a count of masts for each tenant. Output the dictionary to the console in a readable form.
+NOTE. Treat "Everything Everywhere Ltd" and "Hutchinson3G Uk Ltd&Everything Everywhere Ltd" as separate entities.
+
+4. List the data for rentals with Lease Start Date between 1 June 1999 and 31 Aug 2007.
+Output the data to the console with dates formatted as DD/MM/YYYY.
+
+    
