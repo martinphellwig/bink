@@ -5,7 +5,6 @@ from io import StringIO
 
 from django.test import TestCase
 
-from .. import models
 from ..functions import lease_rent
 from .factories import UnitFactory
 
