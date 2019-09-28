@@ -16,3 +16,15 @@ this project in. However it should be reasonably portable (though not tested)
 and just creating an environment where the `requirements.txt` are installed
 should be enough to use this project.
 
+Commands
+========
+fetch
+-----
+```console
+$ python manage.py fetch
+```
+This fetches the CVS from location and prints it to stdout. For help do:
+
+```console
+$ python manage.py fetch --help
+```
