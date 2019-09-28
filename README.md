@@ -40,6 +40,20 @@ This stores the data into the DB. For help do:
 $ python manage.py store --help
 ```
 
+current_rent
+----------
+```console
+$ python manage.py current_rent 
+```
+This returns a CSV formatted output of (by default 5 items) masts ordered in
+ascending order of rent.
+For help do:
+
+```console
+$ python manage.py current_rent  --help
+```
+
+
 lease_rent
 ----------
 ```console

@@ -1,6 +1,6 @@
 """
-This module contains the store function which is used in the django command
-store function.
+This module contains the lease_rent function which is used in the django command
+lease_rent function.
 """
 import sys
 

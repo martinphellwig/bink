@@ -6,7 +6,7 @@ from io import StringIO
 from django.test import TestCase
 
 from ..functions import lease_rent
-from .factories import UnitFactory
+from .factories import UnitFactory, reset
 
 
 class TestLeaseRent(TestCase):
@@ -15,6 +15,7 @@ class TestLeaseRent(TestCase):
     def test_1_returns_lease_rent(self):
         "Is the output equal to what we put in?"
         lease_years = 2
+        reset()
         UnitFactory(
             lease__years=lease_years,
             lease__rent=42,
