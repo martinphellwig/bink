@@ -28,3 +28,14 @@ This fetches the CVS from location and prints it to stdout. For help do:
 ```console
 $ python manage.py fetch --help
 ```
+
+store
+-----
+```console
+$ python manage.py store apps/bink/tests/_test_data.csv
+```
+This stores the data into the DB. For help do:
+
+```console
+$ python manage.py store --help
+```
