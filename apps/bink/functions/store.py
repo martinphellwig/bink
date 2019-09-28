@@ -7,24 +7,9 @@ import csv
 from django.utils.timezone import datetime
 
 from .. import models
+from .common import MAP_FIELDS, MAP_FIELDS_R
 
 _INSTANCE_CACHE = {}
-
-MAP_FIELDS = {
-    "Units Reference": ("Unit", "reference"),
-    "Unit Name": ("Unit", "name"),
-    "Tenant Name": ("Tenant", "name"),
-    "Property Name": ("Property", "name"),
-    "Property Address": ("Property", "address"),
-    "Lease Start Date": ("Lease", "started"),
-    "Lease End Date": ("Lease", "stopped"),
-    "Lease Years": ("Lease", "years"),
-    "Next Rent Review": ("Lease", "review"),
-    "Current Rent": ("Lease", "rent"),
-    "Unit type": ("UnitType", "value"),
-}
-
-MAP_FIELD_R = {value: key for key, value in MAP_FIELDS.items()}
 
 
 def _save_instance_cached(model_name, data):
@@ -56,7 +41,7 @@ def _save_instance(fields, row):
     data = {}
 
     for instance_field in fields:
-        item_key = MAP_FIELD_R[instance_field]
+        item_key = MAP_FIELDS_R[instance_field]
         item = row[item_key]
 
         # Sanitize values
