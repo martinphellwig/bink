@@ -58,3 +58,15 @@ class UnitFactory(factory.django.DjangoModelFactory):
     tenant = factory.SubFactory(TenantFactory)
     property = factory.SubFactory(PropertyFactory)
     lease = factory.SubFactory(LeaseFactory)
+
+
+def reset():
+    factories = [
+        TenantFactory,
+        PropertyFactory,
+        LeaseFactory,
+        UnitTypeFactory,
+        UnitFactory,
+    ]
+    for factory in factories:
+        factory.reset_sequence()
