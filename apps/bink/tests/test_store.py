@@ -1,5 +1,5 @@
 """
-Test Cases for fetch
+Test Cases for Store
 """
 import os
 
@@ -15,7 +15,7 @@ TEST_DATA_EMPTY_FIELD = os.path.join(DIR, "_test_data_empty_fields.csv")
 
 
 class TestStore(TestCase):
-    "Test cases for fetch"
+    "Test cases for Store"
 
     def test_1_stores_small_sheet(self):
         "Does it raise a command error on a 404."

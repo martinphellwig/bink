@@ -39,3 +39,15 @@ This stores the data into the DB. For help do:
 ```console
 $ python manage.py store --help
 ```
+
+lease_rent
+----------
+```console
+$ python manage.py lease_rent 
+```
+This returns a list of mast filtered on lease years=25 and a total of the rent.
+For help do:
+
+```console
+$ python manage.py lease_rent --help
+```
