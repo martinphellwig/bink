@@ -45,9 +45,22 @@ lease_rent
 ```console
 $ python manage.py lease_rent 
 ```
-This returns a list of mast filtered on lease years=25 and a total of the rent.
+This returns a CSV formatted output of mast filtered on lease years=25 with a
+further line of the total rent of the above lines.
 For help do:
 
 ```console
 $ python manage.py lease_rent --help
+```
+
+tenant_masts
+----------
+```console
+$ python manage.py lease_rent 
+```
+This returns a pretty printed dictionary with tenants and the amount of units
+associated.
+
+```console
+$ python manage.py tenant_masts
 ```

@@ -12,13 +12,13 @@ from .. import models
 DEFAULT = 25
 
 
-def tenant_masts(years=DEFAULT, output=sys.stdout):
+def tenant_masts(output=sys.stdout):
     "Return a pretty print of a dict tenants as key and count mast as value."
-    qs = (
+    queryset = (
         models.Unit.objects.all()
         .order_by("tenant__name")
         .values("tenant__name")
         .annotate(db.models.Count("reference"))
     )
-    returns = {row["tenant__name"]: row["reference__count"] for row in qs}
+    returns = {row["tenant__name"]: row["reference__count"] for row in queryset}
     pprint(returns, stream=output)
