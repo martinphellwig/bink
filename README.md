@@ -23,7 +23,8 @@ fetch
 ```console
 $ python manage.py fetch
 ```
-This fetches the CVS from location and prints it to stdout. For help do:
+This fetches the CVS from location and prints it to stdout. This function
+accepts additional arguments see:
 
 ```console
 $ python manage.py fetch --help
@@ -34,7 +35,8 @@ store
 ```console
 $ python manage.py store apps/bink/tests/_test_data.csv
 ```
-This stores the data into the DB. For help do:
+This stores the data into the DB. This function accepts additional arguments
+see:
 
 ```console
 $ python manage.py store --help
@@ -47,7 +49,7 @@ $ python manage.py current_rent
 ```
 This returns a CSV formatted output of (by default 5 items) masts ordered in
 ascending order of rent.
-For help do:
+This function accepts additional arguments see:
 
 ```console
 $ python manage.py current_rent  --help
@@ -61,7 +63,7 @@ $ python manage.py lease_rent
 ```
 This returns a CSV formatted output of mast filtered on lease years=25 with a
 further line of the total rent of the above lines.
-For help do:
+This function accepts additional arguments see:
 
 ```console
 $ python manage.py lease_rent --help
@@ -77,4 +79,17 @@ associated.
 
 ```console
 $ python manage.py tenant_masts
+```
+
+
+list_rentals
+------------
+```console
+$ python manage.py list_rentals 
+```
+This returns a csv type output filtered on the lease start date.
+This function accepts additional arguments see:
+
+```console
+$ python manage.py rentals --help
 ```
