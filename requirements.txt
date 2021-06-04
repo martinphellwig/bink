@@ -1,4 +1,4 @@
-Django==2.2.5
+Django==2.2.21
 black==19.3b0
 coverage==4.5.4
 factory-boy==2.12.0
